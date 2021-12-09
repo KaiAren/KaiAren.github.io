@@ -1,0 +1,908 @@
+body{
+	font-family:Aria, sans-serif;
+}	
+/*Загрузочный экран*/
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+z-index: 11;
+  background: #fff;
+  
+  -webkit-animation:loader 2s forwards;
+ 	-o-animation:loader 2s forwards;
+    animation:loader 2s  forwards;
+   
+    
+}
+
+.loader{
+
+ -webkit-animation:loaderR 8s forwards;
+ 	-o-animation:loaderR   8s forwards;
+    animation:loaderR      8s  forwards;
+}
+
+
+.preloader__image {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  margin-top: -32px;
+  margin-left: -32px;
+  background: url('../img/Preloader_9.gif') no-repeat 50% 50%; /*расположение (url) изображения gif и др. параметры*/
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+
+
+@keyframes loader{
+	0%{opacity:1;}
+	50%{opacity: 1;}
+	70%{opacity: 1;}
+	90%{opacity:1;}
+	95%{opacity: 0.5;}
+	100%{ opacity:0;}
+}
+
+@keyframes loaderR{
+
+0%{z-index: 11;
+}
+
+100%{z-index: -2;
+position: relative;}
+
+}
+
+
+
+
+
+/*Сдесь начинается сайт*/
+
+
+
+nav{
+	position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color:#344051;
+    
+z-index: 10;
+}
+.logo{
+    color: white;
+    font-size: 28px;
+    line-height: 60px;
+    padding-left: 160px;
+    float: left;
+   
+
+    
+}
+/*  Меню */
+.menu{
+
+    float: left;
+    margin-left: 200px;
+    line-height: 60px;
+  
+    
+}
+
+.menu li{
+	opacity: 0;
+}
+
+.menu>ul>li{
+    float: left;
+    font-weight: 550;
+    text-indent: 40px;
+    font-size: 15px;
+    color: #fafafa;
+    text-transform: uppercase;
+ -webkit-animation:topshift 2s forwards;
+ 	-o-animation:topshift 2s forwards;
+    animation:topshift 2s forwards;
+     
+
+   
+}
+
+.menu>ul>li>a{
+	color: #fafafa;
+	
+}
+
+/* анимации к menu */
+
+.menu>ul>li>a:hover{
+
+color:#F19709;
+transition: all, 0.3s;
+
+ 
+}
+
+.menu>ul>li:active{
+	transform:scale(1.5,  1.5) ;
+transition: all 0.4s;
+	}
+
+
+@keyframes move{
+
+0%{opacity: 0}
+
+
+100%{opacity: 1}
+}
+
+
+@keyframes topshift{
+
+0%{margin-top: -80px;}
+
+100%{margin-top: 0;opacity:1;
+ }
+
+}
+
+.menu li:nth-child(2){
+	animation-delay: 0.4s;
+}
+
+
+
+.menu li:nth-child(3){
+	animation-delay: 0.8s;
+}
+
+
+
+.menu li:nth-child(4){
+	animation-delay: 1.2s;
+}
+
+
+.menu li:nth-child(5){
+	animation-delay: 1.4s;
+}
+
+
+.menu li:nth-child(6){
+	animation-delay: 2s;
+}
+
+/* основной блок  */
+.main{
+	width: 100%;
+	height: calc(100% - 60px);
+	background: url("https://blog.engineyard.com/hs-fs/hubfs/36_RoR_vs_PHP-1.jpg?width=2760&name=36_RoR_vs_PHP-1.jpg") center/cover no-repeat;
+}
+
+
+
+/*Блок "Приветствие" и мои работы */
+
+.titlle_conteiner{
+	margin: 300px 0 0 260px;
+	float: left;
+	color: #2c384a;
+	text-align: center;
+	-webkit-animation:titl 4s forwards;
+ 	-o-animation:titl 4s forwards;
+    animation:titl 4s forwards;
+
+
+
+}
+.titlle_conteiner h1{
+	font-size: 60px;
+	font-weight: bold;
+}
+.titlle_conteiner h4{
+	margin-top: 20px;
+	font-size: 25px;
+	color: #79818d;
+
+
+}
+
+
+.titlle_conteiner input{
+	height: 40px;
+	text-align: center;
+	border: 2px solid #000;
+	border-radius: 5px;
+	background: none;
+	padding: 0 16px;
+	font-size: 15px;
+	color:  #fafafa;
+	margin: 50px 14px 0 14px;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: animate_gradient 5s ease infinite;
+	}
+
+/*Анимации к titlle_conteiner */
+
+.titlle_conteiner input:hover{
+	 
+	background: linear-gradient(-45deg, #E33F0C, #EE1515, #FFFC00);
+	background-size: 400% 400%;
+	animation: animate_gradient 5s ease infinite;
+	transform: scale(1.1, 1.1) ;
+	transition: all 0.5s; 
+}
+
+.titlle_conteiner input:active{
+
+transform: scale(1.5, 1.5);
+
+
+}
+
+@keyframes  titl{
+
+0%{margin-left: -1000px;}
+
+
+100%{margin-left:260px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+ /*  Информация обо мне */
+
+ .info {
+	width: 100%	;
+	float: left;
+	background-color:#fafafa;
+	 padding-top: 100px;
+	 box-shadow: 0 -5px 5px -30px rgba(0, 0, 0, .5);
+     height:700px;
+     text-align: center;
+}
+.info h2{
+	font-size: 27px;
+	font-weight: bold;
+	color:#344051;
+	
+}
+
+/*  линия под заголовком  */
+.line{
+	width: 66px;
+	margin-left: 600px;
+	padding: 10px 0 30px 0;
+
+
+}
+
+/*фото профиля */
+
+.info img{
+	width: 200px;
+	height: auto;
+	border-radius: 60px;
+	padding: 100px 0 20px 20px ; 
+}
+
+
+
+ .info p{
+ 	font-size: 17px;
+ 	text-align: left;
+ 	padding-left: 250px;
+ 	color: #3f495a;
+ 	font-weight: 600;
+ }
+ .info input{
+ 	height: 40px;
+	text-align: center;
+	border: 2px solid #fafafa;
+	border-radius: 5px;
+	background: none;
+	padding: 0 16px;
+	font-size: 15px;
+	color:  #fafafa;
+	margin: 50px 14px 0 14px;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: animate_gradient 5s ease infinite;
+	transition: all 0.5s; 
+
+ }
+/* анимации к info */
+
+@keyframes  animate_gradient{
+	0%{background-position: 0% 50%;}
+	50%{background-position: 100% 50%;}
+	100%{background-position: 0% 50%;}
+}
+
+ .info input:hover{
+ box-shadow: 0px 0px 10px 5px rgb(251, 236, 0);
+transition: all 0.4s;
+ }
+
+ .info input:active{
+
+transform: scale(1.5, 1.5);
+
+
+}
+
+
+   /* Что я умею */
+
+
+ .info_conteiner{
+	background-image:url("../img/fon1.jpg") ;
+ 	width: 100%;
+ 	background-position: 100% 100%;
+ 	height: 700px;
+ 	text-align: center;
+ 	padding-top: 100px;
+ 	float: left;
+ 	background-repeat: no-repeat;
+
+
+
+ }
+ .info_conteiner h2{
+	font-size: 27px;
+	font-weight: bold;
+	color:#344051;
+
+ 
+}
+
+
+
+
+
+
+.info_conteiner img{
+	width: 55px;   
+}
+.img-infoA{
+
+-webkit-animation:imgA 2s infinite;
+ 	-o-animation:imgA 2s infinite;
+    animation:imgA 2s infinite;
+     animation-direction: alternate;
+     animation-timing-function: ease-in-out;
+}
+.img-infoB{
+position: absolute;
+left: 790px;
+margin-top: 40px;
+-webkit-animation:imgB 2s  infinite;
+ 	-o-animation:imgB 2s infinite;
+    animation:imgB 2s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+	
+.info_conteiner img:nth-child(3){
+position: absolute;
+left: 410px;
+margin-top: 40px;
+}
+
+
+/*Анимации к иконкам к блоку выше*/
+
+@keyframes imgA{
+
+0%{left: 410px;position: absolute;}
+
+100%{left: 790px;
+position: absolute;}	
+
+} 
+
+@keyframes imgB{
+
+0%{left: 790px;position: absolute;}
+
+100%{left: 410px;position: absolute;}	
+
+} 
+
+
+/*  линия под заголовком  */
+.line_2{
+	width: 66px;
+	margin-left: 600px;
+	padding: 10px 0 30px 0;
+
+
+}
+ .info_conteiner h4{
+ 	position: relative;
+ 	display: inline-block;
+ 	font-size: 20px;
+ 	text-indent: 110px;
+ 	margin-right: 130px;
+  	color:#F9950F;
+ 	font-weight: 600;
+    padding-top: 100px;
+    padding-bottom: 40px;
+ }
+
+/* тексты под заголовками */
+
+ .text_1{
+ 	padding:0 400px 0 0; 
+ }
+.text_2{
+	padding:0 0 0 400px; 
+	margin-top: -47px;
+}
+
+
+
+.info_conteiner p{
+	font-size: 17px;
+		color: #3f495a;
+}
+
+    /* Кейсы */
+
+
+.Case{
+	text-align:center;
+padding-top: 100px;
+width: 100%;
+height: 1000px;
+float: left;
+color: #384354;
+}
+
+.Case h2{
+	font-size: 27px;
+	font-weight: bold;
+	color:#344051;
+	
+}
+
+/* линия под заголовком */
+
+.line_3{
+	width: 66px;
+	margin-left: 600px;
+	padding: 10px 0 30px 0;
+}
+
+
+.Case p{
+ 	font-size: 17px;
+ 	text-align: center;
+    padding-top: 30px;
+ 	color: #3f495a;
+ 	
+ }
+ .Case img{
+ 	width: 80%;
+ 	height: 500px;
+ 	align-self: center;
+ 	padding-top: 30px;
+ }
+ .Case h4{
+ 	float: left;
+  	font-size: 20px;
+  	padding-left: 20px;
+ }
+ .Case h3{
+ 	font-size: 20px;
+
+ }
+ 
+ .Case input{
+ 	position: relative;
+ 	bottom: 30px;
+ 	right: 640px;
+ 	border: 2px solid #fafafa;
+ 	border-radius: 4px;
+ 	background:  #63b5ae;
+ 	padding: 10px;
+ 	color:#fafafa;
+animation: animate 1s ease infinite;
+ ;
+ }
+ 
+
+/*  это все тоже тексты в Case  */
+
+ .heading_1{
+ 	position: relative;
+ 	bottom: 130px;
+ }
+ .text-Case2{
+position: relative;
+bottom: 135px;
+right: 530px;
+text-align: left;
+ }
+
+
+
+ .heading_2{
+ position: relative;
+ bottom:100px; 
+ }
+  .Case a{
+ 	position: relative;
+ 	bottom: 75px;
+ 	right: 530px;
+ 	font-size: 16px;
+ 	border-bottom: 1px solid #6C6C6C;
+ }
+ .text-Case1{_
+ 	text-align: left;
+ 	position: relative;
+ 	bottom: 20px;
+ }
+
+/* Анимации к кейсам */
+
+.Case input:hover{
+	background: linear-gradient(-45deg,#E51919, #e73c7e, #23d5ab);
+	background-size: 400% 400%;
+	animation: animate_gradient 5s ease infinite;
+	transition: all 0.5s; 
+	
+}
+
+
+.Case input:active{
+	transform: scale(1.5, 1.5);
+}
+
+@keyframes animate{
+	0%{ box-shadow: 0 0 0 0px rgba(23, 22, 22, 0.5)}
+	50%{box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);   }
+	100%{box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);}
+}
+
+
+
+.Case a:hover{
+	border-bottom:3px solid #000000;
+    transition: all 0.4s ;
+}
+
+
+
+
+/* калькулятор */
+
+ .Calculator{
+ 	text-align:  center;
+ 	width: 100%;
+  height: 700px;
+ 	float: left;
+ 	z-index: -1;
+ }
+
+ .Calculator h2{
+ 	font-size: 35px;
+  font-weight: 35px;
+  color: #1c2534;
+ }
+
+ .Calculator h3{
+ 	position: relative;
+ 	margin-left: 335px;
+ 	padding: 30px 0 10px 0;
+ 	text-align: left;
+ 	font-size: 23px; 
+ }
+
+.Calculator select{
+	width: 600px;
+	color:  #737373;
+	height: 40px;
+	padding: 10px;
+	font-weight: bold;
+	background-color: #eeeeee;
+	border-radius:5px;
+	border:3px solid #eeeeee  ;
+}
+
+
+/* линия */
+
+.line_4{
+width: 600px;
+margin-left: 334px;
+padding-top: 30px;
+}
+.Calculator p{
+	text-align:left;
+	margin-left: 334px; 
+	font-size: 17px;
+	font-weight: bold;
+	padding:10px 0 10px 0; 
+	
+
+}
+.Calculator span{
+	
+	float: right;
+	padding-right: 330px;
+}
+
+
+
+/* блок со статистикой */
+
+.static{
+	text-align: center;
+	width: 100%;
+	height: 700px;
+	float: left;
+	background:url(../img/img_clip.jpg) center/cover no-repeat; 
+  
+}
+
+.static h2{
+	font-size: 30px;
+	margin-top: 100px;
+}
+.static h3{
+	position: relative;
+
+
+top: 140px;
+font-size: 28px;
+font-weight: bold;
+display: inline-block;
+	
+}
+
+.static p{
+	position: relative;
+	top: 180px;
+	right: 90px;
+	font-size: 18px;
+	font-weight: bold;
+	display: inline-block;
+}
+
+
+.static_form2{
+	margin-right: -20px;
+}
+.static_form1{
+	margin-right: -30px;
+
+}
+ 
+
+.static img{
+	width: 80px;
+	top: 40px;
+	position: relative;
+	left: 68px;
+}
+
+
+.smail-img {
+margin-left: 40px;
+
+}
+.form-img{
+	padding-left: 10px;
+}
+
+
+
+
+/* мои контакты и отзывы */
+
+.conter{
+float: left;
+text-align: center;
+width: 100%;
+height: 550px;	
+}
+
+.conter h2{
+	font-size: 35px;
+	
+	margin-top: 100px;
+}
+
+
+
+/*линия под заголовком*/
+.line_5{
+width: 600px;
+margin-left: 334px;
+
+}
+.conter p{
+	text-align:left;
+	margin-left: 334px; 
+	font-size: 18px;
+	padding-top: 30px;
+	
+	
+
+}
+.conter span{
+	font-size: 18px;
+	position: relative;
+	top: 20px;
+}
+.conter img{
+	width: 120px;
+	border-radius: 120px;
+	margin-top: 50px;
+}
+
+
+
+.contact{
+	color: #fafafa;
+	width: 100%;
+height: 900px;
+text-align: center;
+float: left;
+background: url(../img/web-kof.jpg)center/cover, no-repeat;
+}
+
+.contact h2{
+	font-size: 35px;
+	margin-top: 100px;
+}
+
+/*линия под заголовком*/
+.line_6{
+width: 75px;
+padding-top: 40px;
+text-align: center;
+
+}
+
+.contact p{
+	font-size:17px;
+	padding-top: 40px; 
+}  
+.contact a{
+	color: #fafafa;
+	padding: 0 20px 0 20px;
+	position: relative;
+	top: 80px;
+	right: 230px;
+	font-size: 16px;
+
+	
+	}
+
+	.contact div{
+		display: inline-block;
+	}
+	.contact img{
+		margin-left: 100px;
+	}
+
+
+	
+	
+
+
+
+
+/* иконки к контактам */
+.map{
+	width: 25px;
+	position: relative;
+	top: 30px;
+	left: 190px;
+}
+
+.email{
+	width: 40px;
+	position: relative;
+   left: 265px;
+   top: 40px;
+}
+
+.phon{
+	position: relative;
+	width: 30px;
+	left: 310px;
+	
+	top: 40px;
+
+}
+
+  /*  комменатарии, отзывы */
+.contact_form{
+	
+	position: relative;
+	top: 100px;
+}
+
+
+.contact_form h3{
+	font-size: 26px;
+	padding-bottom: 30px;
+
+}
+
+ .input-text{
+   font-size: 17px;
+	width: 350px;
+	height: 35px;	
+	background-color: #fafafa;
+	margin: 10px 10px 10px 10px;
+	
+    
+}
+.input-form{
+	width: 600px;
+	height: 100px;
+	font-size: 17px;
+
+}
+.input-form1{
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	border: 2px solid #fafafa;
+	border-radius: 5px;
+	background: none;
+	padding: 0 16px;
+	font-size: 17px;
+	color:  #fafafa;
+	margin: 30px 14px 0 14px;
+}
+
+
+
+
+.contact_form input:hover{
+ box-shadow: 0px 0px 10px 5px rgb(251, 236, 170);
+}
+
+.input-form:hover{
+
+ box-shadow: 0px 0px 10px 5px rgb(251, 236, 170);
+
+}
+
+
+
+
+
+
+
+
+
+
+
