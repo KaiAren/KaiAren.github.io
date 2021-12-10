@@ -35,7 +35,7 @@ z-index: 11;
   height: 64px;
   margin-top: -32px;
   margin-left: -32px;
-  background: url('../img/Preloader_9.gif') no-repeat 50% 50%; /*расположение (url) изображения gif и др. параметры*/
+  background: url('../img/Preloader_9.gif') no-repeat 50% 50%;
 }
 
 .loaded_hiding .preloader {
